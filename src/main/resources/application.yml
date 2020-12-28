@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 251084
+    url: jdbc:postgresql://localhost:5432/task_manager
+    platform: postgres
+    initialization-mode: never
+    continue-on-error: true
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+security:
+  basic:
+    enabled: false
+
+logging:
+  level:
+    root: info
+    org.springframework.web: info
+    hibernate: info
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
